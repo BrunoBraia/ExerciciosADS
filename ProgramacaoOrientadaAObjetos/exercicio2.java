@@ -8,21 +8,22 @@ public class Principal {
 
 	public static void main(String[] args) {
 	
-		int peso;
-		double altura;
+		int valorCorreto = 10000;
+		int palpite = 0;
 		
-		Scanner dados = new Scanner(System.in);
+		Scanner pal = new Scanner(System.in);
 		
-		System.out.println("Digite seu Peso e sua altura: ");	
-		peso = dados.nextInt();
-		altura = dados.nextDouble();
+		while(palpite != valorCorreto) {
+			System.out.println("Quantos soldados Leonidas ira enfrentar?");
+			palpite = pal.nextInt();
+			if(palpite < 10000) {
+				System.out.println("Um pouco mais");
+			}
+			else if(palpite > 10000) {
+				System.out.println("Um pouco menos");
+			}
+		}
+		System.out.println("Exatamente.");
 		
-		System.out.printf("Peso: %d\n", peso);
-		System.out.printf("Altura: %.2f\n", altura);
-		
-		double imc = peso / (altura * altura);
-		
-		System.out.printf("Seu IMC é: %.2f", imc);
-			
 	}	
 }
